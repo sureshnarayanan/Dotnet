@@ -12,6 +12,7 @@ namespace Utilities
         {
             //Generate time based token
            new GenerateSecureTimeToken().GenerateToken();
+           
         }
     }
 }
