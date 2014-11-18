@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessModifiers.cs" />
     <Compile Include="DelegatesAndAnonymousFunctions.cs" />
     <Compile Include="EntityFramework\EFModel.Context.cs">
       <AutoGen>True</AutoGen>

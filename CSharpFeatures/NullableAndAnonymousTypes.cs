@@ -37,14 +37,16 @@ namespace CSharpFeatures
 
             //Implicit Typing
             //Implicitly typed are types that are impicitly converted to the type at compile time
+
             // i is compiled as an int 
-            var i = 5;
+            //var i = 5;
 
             // s is compiled as a string 
-            var s = "Hello";
+            //var s = "Hello";
 
             // a is compiled as int[] 
-            var a = new[] { 0, 1, 2 };
+            //var a = new[] { 0, 1, 2 };
+
             //In many cases the use of var is optional and is just a syntactic convenience. However, when a variable is initialized with 
             //an anonymous type you must declare the variable as var if you need to access the properties of the object at a later point. 
             //Also, the use of anonymous types can hide good opportunities to improve your design
