@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CSharpFeatures
 {
-    //Generics introduce to the .NET Framework the concept of type parameters, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code. 
-    //Generics allow you to define type-safe data structures, without committing to actual data types. This results in a significant performance boost and higher quality code, because you get to reuse data processing algorithms without duplicating type-specific code
+    //Generics introduce to the .NET Framework the concept of type parameters, which make it possible to design classes and methods that defer the specification of 
+    //one or more types until the class or method is declared and instantiated by client code. 
+    //Generics allow you to define type-safe data structures, without committing to actual data types. This results in a significant performance boost and higher quality code, 
+    //because you get to reuse data processing algorithms without duplicating type-specific code
     class Generics
     {
         public void Execute()

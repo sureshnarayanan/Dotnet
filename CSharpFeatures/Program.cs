@@ -12,38 +12,32 @@ namespace CSharpFeatures
         {
             //Generics
             Console.WriteLine("<-----Generics Start------->");
-            Generics g = new Generics();
-            g.Execute();
+            new Generics().Execute();
             Console.WriteLine("<-----Generics End------->");
 
             //Delegates
             Console.WriteLine("<-----Delegates Start------->");
-            DelegatesAndAnonymousFunctions d = new DelegatesAndAnonymousFunctions();
-            d.Execute();
+            new DelegatesAndAnonymousFunctions().Execute();           
             Console.WriteLine("<-----Delegates End------->");
 
             //Nullable types
             Console.WriteLine("<-----NullableTypes Start------->");
-            NullableAndAnonymousTypes n = new NullableAndAnonymousTypes();
-            n.Execute();
+            new NullableAndAnonymousTypes().Execute();
             Console.WriteLine("<-----NullableTypes End------->");
 
             //Lamda expression
             Console.WriteLine("<-----Lambda Start------->");
-            LambdaExpression l = new LambdaExpression();
-            l.Execute();
+            new LambdaExpression().Execute();
             Console.WriteLine("<-----Lambda End------->");
 
             //Extension Methods 
             Console.WriteLine("<-----ExtensionMethods Start------->");
-            ExtensionMethods e = new ExtensionMethods();
-            e.Execute();
+            new ExtensionMethods().Execute();
             Console.WriteLine("<-----ExtensionMethods End------->");
 
             //Entity framework Methods 
             Console.WriteLine("<-----EntityFramework Start------->");
-            EntityFrameworkClass ef = new EntityFrameworkClass();
-            ef.Execute();
+            new EntityFrameworkClass().Execute();
             Console.WriteLine("<-----EntityFramework End------->");
 
 
