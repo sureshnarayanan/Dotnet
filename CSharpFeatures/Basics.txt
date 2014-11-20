@@ -1,0 +1,36 @@
+﻿-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Covariance and Contravariance:
+
+Within the type system of a programming language, a typing rule or a type constructor is:
+
+covariant if it preserves the ordering of types (≤), which orders types from more specific to more generic;
+contravariant if it reverses this ordering;
+bivariant if both of these apply;
+invariant or nonvariant if neither of these applies.
+
+Consider the array type constructor: from the type Animal we can make the type Animal[] ("array of animals"). Should we treat this as
+
+Covariant: a Cat[] is an Animal[]
+Contravariant: an Animal[] is a Cat[]
+or neither (invariant)?
+If we wish to avoid type errors, and the array supports both reading and writing elements, then only the third choice is safe. 
+Clearly, not every Animal[] can be treated as if it were a Cat[], since a client reading from the array will expect a Cat, but an Animal[] may contain e.g. a Dog. So the contravariant rule is not safe.
+
+Conversely, a Cat[] can not be treated as an Animal[]. It should always be possible to put a Dog into an Animal[]. With covariant arrays this can not be guaranteed to be safe, 
+since the backing store might actually be an array of cats. So the covariant rule is also not safe—the array constructor should be invariant. Note that this is only an issue for mutable arrays; 
+the covariant rule is safe for immutable (read-only) arrays.
+
+This illustrates a general phenomenon. Read-only data types (sources) can be covariant; write-only data types (sinks) can be contravariant. Mutable data types which act as 
+both sources and sinks should be invariant.
+
+In C#, each type parameter of a generic interface can be marked covariant (out), contravariant (in), or invariant (no annotation). 
+For example, we can define an interface IEnumerator<T> of read-only iterators, and declare it to be covariant (out) in its type parameter.
+
+    interface IEnumerator<out T>
+    {
+        T Current { get; }
+        bool MoveNext();
+    }
+With this declaration, IEnumerator will be treated as covariant in its type argument, e.g. IEnumerator<Cat> is a subtype of IEnumerator<Animal>.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

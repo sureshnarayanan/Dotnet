@@ -10,6 +10,11 @@ namespace CSharpFeatures
     {
         static void Main(string[] args)
         {
+            //ValueAndReferenceType
+            Console.WriteLine("<-----ValueAndReferenceType Start------->");
+            new ValueAndReferenceType().Execute();
+            Console.WriteLine("<-----ValueAndReferenceType end------->");
+
             //Generics
             Console.WriteLine("<-----Generics Start------->");
             new Generics().Execute();

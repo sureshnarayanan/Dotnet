@@ -43,7 +43,10 @@ namespace CSharpFeatures
             Console.WriteLine(numbers.Count(n => n % 2 == 1));
             //returns list
             var v = numbers.TakeWhile(n => n < 6);
-           
+
+            //Func<T> is a predefined system delegate type 
+            Func<int, int, string> func = (x, y) => (x * y).ToString();
+            Console.WriteLine(func(5,6));
         }
     }
 }
