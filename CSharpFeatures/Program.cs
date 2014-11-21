@@ -45,7 +45,6 @@ namespace CSharpFeatures
             new EntityFrameworkClass().Execute();
             Console.WriteLine("<-----EntityFramework End------->");
 
-
             Console.WriteLine("Done. Press any key to exit");
 
             Console.ReadLine();
