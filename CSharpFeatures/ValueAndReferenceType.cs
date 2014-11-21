@@ -16,13 +16,11 @@ namespace CSharpFeatures
             StringBuilder r2 = r1;
             Console.WriteLine(r2); // Prints hello
 
-
             StringBuilder r11 = new StringBuilder();
             r11.Append("hello");
             StringBuilder r22 = r11;
             r11.Append(" world");
             Console.WriteLine(r22); // Prints hello world
-
 
             StringBuilder r111 = new StringBuilder();
             r111.Append("hello");
